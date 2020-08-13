@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<div class="container text-center">
+    <div>
+        <h1>WELCOME TO PASSGEN</h1>
+        <h3>An advanced password generator</h3>
+    </div>
+    <div>
+        <form action="{% url 'challenge' %}">
+            <select name='length'>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+                <option value='6'>6</option>
+                <option value='7'>7</option>
+                <option value='8'>8</option>
+                <option value='9'>9</option>
+                <option value='10' selected='selected'>10</option>
+                <option value='11'>11</option>
+                <option value='12'>12</option>
+                <option value='13'>13</option>
+                <option value='14'>14</option>
+                <option value='15'>15</option>
+                <option value='16'>16</option>
+            </select> Length
+            <br>
+            <input type="checkbox" name='special'>Special Characters
+            <br>
+            <input type="checkbox" name='numbers'>Numbers
+            <br>
+            <input type="checkbox" name='uppercase'>Uppercase
+            <br>
+            <input type="submit" name='generate' value="Generate Password" class="btn btn-primary">
+        </form>
+    </div>
+    <div>
+        <a href="{% url 'about' %}" class="btn btn-success">About PassGen</a>
+    </div>
+</div>
